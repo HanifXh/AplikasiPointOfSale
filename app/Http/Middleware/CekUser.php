@@ -9,7 +9,7 @@ class CekUser{
     {
         $user = Auth::user();
         if($user && $user->level !=$level){
-            return redirect('/')
+            return redirect('/');
         }
         else return $next($request);
     }
